@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
-    'blogengine',
+    'blogengine.apps.BlogengineConfig',
 ]
 
 MIDDLEWARE = [
