@@ -13,3 +13,10 @@ def getPosts(request, selected_page=1):
     returned_page = pages.page(selected_page)
     # Display all the posts
     return render(request, 'posts.html', {'posts': returned_page.object_list})
+
+
+def getPost(request, postSlug):
+    # Get specified post
+    post = Post.objects.filter(slug=postSlug)
+    # Display specified post
+    return render(request, 'posts.html', {'posts': post})
