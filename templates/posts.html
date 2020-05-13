@@ -2,10 +2,9 @@
   <head>
     <title>My Django Blog</title>
   </head>
-
   <body>
     {% for post in posts %}
-    <h1>{{ post.title }}</h1>
+    <h1><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h1>
     <h3>{{ post.pub_date }}</h3>
     {{ post.text }} {% endfor %}
   </body>
