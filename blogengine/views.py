@@ -15,7 +15,7 @@ def getPosts(request, selected_page=1):
     except EmptyPage:
         returned_page = pages.page(pages.num_pages)
     # Display all the posts
-    return render(request, 'posts.html', {'posts': returned_page.object_list})
+    return render(request, 'posts.html', {'posts': returned_page.object_list, 'page': returned_page})
 
 
 def getPost(request, postSlug):
