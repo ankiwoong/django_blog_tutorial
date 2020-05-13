@@ -6,7 +6,7 @@ class Post(models.Model):
     pub_date = models.DateTimeField()               # 작성일
     text = models.TextField()                       # 본문내용
     slug = models.SlugField(max_length=40, unique=True,
-                            allow_unicode=True, null=True)
+                            allow_unicode=True, null=False)
 
     def __str__(self):                              # 객체의 제목을 반환
         return self.title
