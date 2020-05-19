@@ -22,4 +22,4 @@ def getPost(request, postSlug):
     # Get specified post
     post = Post.objects.filter(slug=postSlug)
     # Display specified post
-    return render(request, 'posts.html', {'posts': post})
+    return render(request, 'single.html', {'posts': post})
